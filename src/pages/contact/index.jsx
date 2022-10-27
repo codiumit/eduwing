@@ -2,13 +2,13 @@ import React from 'react'
 import Footer from '../common/Footer'
 import Navbar from '../common/Navbar'
 
-function About() {
+function Contact() {
   return (
     <div>
         <Navbar />
-        <Footer/>
+        <Footer />
     </div>
   )
 }
 
-export default About
+export default Contact

@@ -1,20 +1,32 @@
-import { ButtonBack, ButtonNext, CarouselProvider, Slide, Slider } from 'pure-react-carousel'
 import React from 'react'
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+
 function Screen1() {
     return (
-        <CarouselProvider
-            className='w-full h-screen relative'
-            totalSlides={3}
-        >
-            <Slider>
-                <Slide index={0}><img src="/image/home/carousel-1.jpg" className='w-full' alt="" /></Slide>
-                <Slide index={1}><img src="/image/home/carousel-2.jpg" className='w-full' alt="" /></Slide>
-                <Slide index={2}><img src="/image/home/carousel-1.jpg" className='w-full' alt="" /></Slide>
-            </Slider>
-            <ButtonBack className='inset-y-0 my-0 absolute'>Back</ButtonBack>
-            <ButtonNext className='inset-y-0 my-0 absolute right-0'>Next</ButtonNext>
-        </CarouselProvider>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper relative">
+            <SwiperSlide>
+                <img src="image/home/carousel-1.jpg" alt="carousel" />
+            </SwiperSlide>
+            <SwiperSlide>
+                <img src="image/home/carousel-2.jpg" alt="carousel" />
+            </SwiperSlide>
+            <SwiperSlide>
+                <img src="image/home/carousel-1.jpg" alt="carousel" />
+            </SwiperSlide>
+            <SwiperSlide>
+                <img src="image/home/carousel-2.jpg" alt="carousel" />
+            </SwiperSlide>
+            <SwiperSlide>
+                <img src="image/home/carousel-1.jpg" alt="carousel" />
+            </SwiperSlide>
+            <SwiperSlide>
+                <img src="image/home/carousel-2.jpg" alt="carousel" />
+            </SwiperSlide>
+            <div className="w-[550px] h-[326px] border absolute  inset-y-0 right-40  my-auto z-50 bg-white opacity-70 rounded-lg"></div>
+        </Swiper>
     )
 }
 
