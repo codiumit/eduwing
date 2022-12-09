@@ -1,4 +1,4 @@
-const job = [
+const jobs = [
     {
         id:1,
         title:'Web Developer',
@@ -50,4 +50,4 @@ const job = [
 ]
 
 
-export default job
+export default jobs

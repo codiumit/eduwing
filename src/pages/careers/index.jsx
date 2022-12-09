@@ -4,7 +4,7 @@ import Banner from "../common/Banner";
 import Footer from "../common/Footer";
 import Navbar from "../common/Navbar";
 import Whatsapp from "../common/Whatsapp";
-import job from "../../custom/job";
+import jobs from "../../custom/job";
 
 function Careers() {
   return (
@@ -29,7 +29,7 @@ function Careers() {
         <div className="w-4/5 space-y-5">
 
             {
-                job.map(e=><Job key={e.id} id={e.id} title={e.title} desc={e.desc} location={e.location} exp={e.exp} type={e.type} deadline={e.deadline}/>)
+                jobs.map(e=><Job key={e.id} id={e.id} title={e.title} desc={e.desc} location={e.location} exp={e.exp} type={e.type} deadline={e.deadline}/>)
             }
         </div>
 
