@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import university from '../../../custom/university'
 import Footer from '../../common/Footer'
 import Navbar from '../../common/Navbar'
@@ -20,13 +20,22 @@ function Uni() {
         <div className="px-[10%] py-[5%] space-y-5">
             <img src={`/image/university/logo/${uni.logo}`}  alt="logo" width={150} height={150} title='logo' />
             <h1 className='text-2xl font-bold'>{uni.name}</h1>
-            <p className='w-1/2'>{uni.dec}</p>
+            <p className='xl:w-1/2'>{uni.dec}</p>
             <div className="flex gap-5">
-                <button>Application Form</button>
-                <button>Visit University Website</button>
+                <button className='w-[193px] h-[44px] rounded-xl bg-[#E63946] text-white'>Application Form</button>
+                <button>
+                   <a href={uni.website}> Visit University Website</a>
+                </button>
             </div>
-            <div className="flex flex-wrap gap-5">
-                {uni.course.map(e=><div className="w-[327px] h-[327px] border rounded-3xl"></div>)}
+            <div className="flex flex-wrap gap-5 justify-center items-center">
+                {uni.course.map(e=><Link to={`${e.cid}`}>
+                    <div className="w-[327px] h-[327px] border rounded-3xl overflow-hidden">
+                    <img src={`/image/university/course/${e.image}`} alt={e.title} className='w-full h-[264px]' />
+                    <div className="w-full h-[63px] flex justify-center items-center">
+                        <h2 className='text-center font-medium text-base'>{e.title}</h2>
+                    </div>
+                </div>
+                </Link>)}
             </div>
         </div>
         <Whatsapp />

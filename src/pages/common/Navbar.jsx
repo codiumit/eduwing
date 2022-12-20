@@ -25,7 +25,7 @@ function Navbar() {
             <NavLink to={"/about"}>ABOUT US</NavLink>
           </li>
           <li className="hover:opacity-100 group-hover:opacity-50 h-full flex justify-center items-center">
-            DISTANCE EDUCATION
+            <NavLink to={'/university'}>DISTANCE EDUCATION</NavLink>
           </li>
           <li className="hover:opacity-100 group-hover:opacity-50 h-full flex justify-center items-center">
             STUDY ABROUD
@@ -34,7 +34,7 @@ function Navbar() {
             ATTESTATION
           </li>
           <li className="hover:opacity-100 group-hover:opacity-50 h-full flex justify-center items-center">
-            GALLERY
+            <NavLink to={'/gallery'}>GALLERY</NavLink>
           </li>
           <li className="hover:opacity-100 group-hover:opacity-50 h-full flex justify-center items-center">
             <Link to={"/careers"}> CAREER</Link>
